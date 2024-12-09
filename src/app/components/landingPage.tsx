@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Card from "./card";
 export default function Home() {
   return (
     <div>
@@ -10,19 +9,7 @@ export default function Home() {
       <div className="bg-gray-100 py-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Left Section */}
-            {/* <div className="bg-blue-500 text-white p-6 rounded-md">
-              <h2 className="text-2xl font-bold mb-4">
-                The Best Platform for Car Rental
-              </h2>
-              <p className="mb-4">
-                Ease of doing a car rental safely and conveniently. Of course at
-                a low price.
-              </p>
-              <button className="bg-white text-blue-500 px-4 py-2 rounded-md hover:bg-blue-600 hover:text-white">
-                Rental Car
-              </button>
-            </div> */}
+           
             <Image 
             src="/Ads 1.png"
             alt="carpic"
@@ -31,20 +18,7 @@ export default function Home() {
             className="w-[840px] h-[340px]"
             />
 
-            {/* Right Section */}
             
-             {/* <div className="bg-blue-700 text-white p-6 rounded-md w-[284px] h-[224px] ">
-            
-                <h2 className="text-2xl font-bold mb-4  ">
-               Easy way to rent a car at a low price
-               </h2>
-                 <p className="mb-4 ">
-                Providing cheap car rental services and safe and comfortable facilities.
-                </p>
-                  <button className="bg-white text-blue-700 px-4 py-2 rounded-md hover:bg-blue-800 hover:text-white">
-                  Rental Car
-                </button>
-                </div> */}
             
              <Image 
             src="/Ads 2.png"
@@ -67,7 +41,44 @@ export default function Home() {
 export const Populor =() =>{
   return(
     <div>
-      <h2 className="w-[92px] h-[24px] ml-[150px] text-gray-500">Popular Car</h2>
+      <h2 className="w-[92px] h-[24px] ml-[150px] mt-[50px] text-gray-500">Popular Car</h2>
+    </div>
+
+  )
+}
+
+// populor car details section
+
+export const NewDesign =() =>{
+    const NewDesignData =[
+      
+        {id: 1,name: "Koenigsegg", price:99.00,description: "Sport /2 People/90L", Image: "/car1.png"},
+        {id: 2,name: "Nissan GT - R", price:80.00,description: "Sport /2 People/80L", Image: "/car2.png"},
+        {id: 3,name: "Rolls - Royce", price:96.00,description: "sedan/3 People/80L", Image: "/Car (3).png"},
+        {id: 4,name: "Nissan GT - R", price:80.00,description: "Sport /2 People/70L", Image: "/Car (4).png"},
+        
+    ];
+return(
+    <div className="NewDesign grid grid-cols-1 md:grid-cols-4 gap-10 px-10 my-10">
+        {NewDesignData.map(Design =>(
+            <div key={Design.id} className="Design-cart bg-white p-5 rounded-md shadow-md text-center">
+             <img src={Design.Image} alt={Design.name} className="w-[320px] h-[70px] rounded-md transition-transform duration-300 transform hover:scale-110 pl-[50px] "/>
+             <h3 className="mt-4 text-[16px] font-bold"> {Design.name}</h3>
+             <p className="text-gray-500 text-[14px]">{Design.description}</p>
+             <div className="price text-black-500 text-[14px] font-semibold mt-2">&{Design.price}/day</div>
+             <button className="mt-4  w-[102px] h-[34px] bg-blue-500 text-white rounded-md hover:bg-red-500 ">Rent Now</button>
+            </div>
+        ))}
+    </div>
+)
+
+// (Recomendation Car section)
+
+}
+export const Populor2 =() =>{
+  return(
+    <div>
+      <h2 className="w-[212px] h-[44px] ml-[150px] mt-[90px] text-gray-500">Recomendation Car</h2>
     </div>
 
   )
@@ -75,71 +86,33 @@ export const Populor =() =>{
 
 
 
-
-export const CardDetails = () => {
-  const data = [
-    {
-      id: 1,
-      img: "/car1.png",
-      title: "HAVIT HV-G92 Gamepad",
-      price: "$120 $160",
-      rate: "/hero-icons/star.png",
-    },
-    {
-      id: 2,
-      img: "/car2.png",
-      title: "AK-900 Wired Keyboard",
-      price: "$960 $1160",
-      rate: "/hero-icons/star.png",
-    },
-    {
-      id: 3,
-      img: "/car (3).png",
-      title: "IPS LCD Gaming Monitor",
-      price: "$370 $400",
-      rate: "/hero-icons/star.png",
-    },
-    {
-      id: 4,
-      img: "/car (4).png",
-      title: "S-Series Comfort Chair ",
-      price: "$375 $400",
-      rate: "/hero-icons/star.png",
-    },
-    {
-      id: 4,
-      img: "/car (5).png",
-      title: "S-Series Comfort Chair ",
-      price: "$375 $400",
-      rate: "/hero-icons/star.png",
-    },
-    {
-      id: 4,
-      img: "/car (6).png",
-      title: "S-Series Comfort Chair ",
-      price: "$375 $400",
-      rate: "/hero-icons/star.png",
-    },
-    {
-      id: 4,
-      img: "/car (7).png",
-      title: "S-Series Comfort Chair ",
-      price: "$375 $400",
-      rate: "/hero-icons/star.png",
-    },
-    {
-      id: 4,
-      img: "/car (7).png",
-      title: "S-Series Comfort Chair ",
-      price: "$375 $400",
-      rate: "/hero-icons/star.png",
-    },
+export const NewDesign2 =() =>{
+  const NewDesignData =[
+    
+      {id: 1,name: "All New Rush", price:99.00,description: "SUV/70L/6 People", Image: "Car (9).png"},
+      {id: 2,name: "CR  - V", price:80.00,description: "SUV/6 People/80L", Image: "/Car (10).png"},
+      {id: 3,name: "All New Terios", price:96.00,description: "SUV/6 People/80L", Image: "/Car (11).png"},
+      {id: 4,name: "CR  - V", price:80.00,description: "SUV", Image: "/Car (12).png"},
+      {id: 5,name: "MG ZX Exclusice", price:400,description: "Hatchback/6 People/80L", Image: "/Car (13).png"},
+      {id: 6,name: "New MG ZS", price:500,description: "SUV/6 People/80L", Image: "/Car (14).png"},
+      {id: 7,name: "MG ZX Excite", price:400,description: "Hatchback/6 People/80L", Image: "/Car (15).png"},
+      {id: 8,name: "New MG ZS", price:500,description: "SUV/6 People/80L", Image: "/Car (16).png"},
   ];
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-[1170px] ml-6 md:ml-[150px] mt-[40px]">
-      {data.map((item) => (
-        <Card key={item.id} img={item.img} title={item.title} price={item.price} rate={item.rate}></Card>
+return(
+  <div className="NewDesign grid grid-cols-1 md:grid-cols-4 gap-10 px-10 my-10">
+      {NewDesignData.map(Design =>(
+          <div key={Design.id} className="Design-cart bg-white p-5 rounded-md shadow-md text-center">
+           <img src={Design.Image} alt={Design.name} className="w-[320px] h-[70px] rounded-md transition-transform duration-300 transform hover:scale-110 pl-[50px] "/>
+           <h3 className="mt-4 text-[16px] font-bold"> {Design.name}</h3>
+           <p className="text-gray-500 text-[14px]">{Design.description}</p>
+           <div className="price text-black-500 text-[14px] font-semibold mt-2">&{Design.price}/day</div>
+           <button className="mt-4  w-[102px] h-[34px] bg-blue-500 text-white rounded-md  hover:bg-red-500">Rent Now</button>
+          </div>
       ))}
-    </div>
-  );
-};
+  </div>
+)
+
+}
+
+
+

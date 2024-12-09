@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Home, { CardDetails }  from "./components/landingPage";
+import Home, { NewDesign, Populor2 }  from "./components/landingPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/footer";
 import { Populor } from "./components/landingPage";
+import { NewDesign2 } from "./components/landingPage";
+import { Footer2 } from "./components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,8 +27,11 @@ export default function RootLayout({
         {children}
         <Home/>
         <Populor/>
-        <CardDetails/>
+        <NewDesign/>
+        <Populor2/>
+        <NewDesign2/>
         <Footer/>
+        <Footer2/>
 
         </body>
     </html>
